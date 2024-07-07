@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: none; /* Hide all slides by default */
+        }
+
+        .carousel-item.active {
+            display: block; /* Show the active slide */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0 10px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <%- include ('partials/navigation')%>
+    <%- include ('partials/head')%>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="cademyrafa"><img src="img/p1.jpg" alt="Imagen 1"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="canelo"><img src="img/port/can/can11.jpg" alt="Imagen 2"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="san"><img src="img/port/sand/san7.jpeg" alt="Imagen 3"></a>
+            </div>
+
+            <div class="carousel-item">
+              <a href="ang"><img src="img/port/ang/ang8.jpg" alt="Imagen 3"></a>
+          </div>
+
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Sección de Encabezado -->
+    <!-- Sección de Servicios -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1>JEREMY NELSON DISEÑO</h1>
+                <p>Identidad de marca creada con precisión y alineada con una misión.</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <h2 class="h1">01</h2>
+                    <p class="h5">IDENTIDAD DE MARCA</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="h1">02</h2>
+                    <p class="h5">DISEÑO DE LOGO</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="h1">03</h2>
+                    <p class="h5">DISEÑO TIPOGRÁFICO</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h2 class="h1">04</h2>
+                    <p class="h5">ILUSTRACIÓN/ICONOGRAFÍA</p>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p>jeremynelsondesign@gmail.com</p>
+                <p>484 716 1339</p>
+                <p class="h5 mt-4">REDES SOCIALES</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/jeremynelson42/" class="text-dark me-2">LINKEDIN</a>
+                    <a href="https://twitter.com/jeremynelson42" class="text-dark me-2">TWITTER</a>
+                    <a href="https://www.behance.net/jeremynelson" class="text-dark me-2">BEHANCE</a>
+                    <a href="https://www.instagram.com/jeremynelson42/" class="text-dark">INSTAGRAM</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Portafolio -->
+    <section class="portfolio-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="academyrafa">
+                            <img src="img/p1.jpg" class="img-fluid portfolio-img" alt="Proyecto 1">
+                            <div class="portfolio-title">ACADEMIA RAFA MARQUEZ</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="/canelo">
+                            <img src="img/port/can/can1.jpg" class="img-fluid portfolio-img" alt="Proyecto 2">
+                            <div class="portfolio-title">HERMEUS</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p3.jpg" class="img-fluid portfolio-img" alt="Proyecto 3">
+                        <div class="portfolio-title">SAN DIEGO WAVE FC</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="ang">
+                            <img src="img/port/ang/ang9.jpg" class="img-fluid portfolio-img" alt="Proyecto 4">
+                            <div class="portfolio-title">LOS ANGELES</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p5.jpeg" class="img-fluid portfolio-img" alt="Proyecto 5">
+                        <div class="portfolio-title">CHARLOTTE HORNETS</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p6.jpg" class="img-fluid portfolio-img" alt="Proyecto 6">
+                        <div class="portfolio-title">NASHVILLE SOUNDS</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p7.jpeg" class="img-fluid portfolio-img" alt="Proyecto 7">
+                        <div class="portfolio-title">Proyecto 7</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p8.jpeg" class="img-fluid portfolio-img" alt="Proyecto 8">
+                        <div class="portfolio-title">GYM FOR CANELO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <%- include ('partials/comentarios')%>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        let autoSlide = setInterval(nextSlide, 3000); // Cambiar de imagen cada 3 segundos
+
+        // Detener el carrusel cuando el usuario pasa el ratón sobre él
+        document.querySelector('.carousel').addEventListener('mouseover', () => {
+            clearInterval(autoSlide);
+        });
+
+        document.querySelector('.carousel').addEventListener('mouseout', () => {
+            autoSlide = setInterval(nextSlide, 3000);
+        });
+
+        // Inicializar el carrusel
+        showSlide(currentIndex);
+    </script>
+
+    <footer>
+        <%- include ('partials/footer')%>
+    </footer>
+</body>
+</html>

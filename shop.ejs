@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="portafolio.css" rel="stylesheet">
+</head>
+<body>
+    <%- include ('partials/navigation2')%>
+    <%- include ('partials/head2')%>
+    <!-- Sección de Portafolio -->
+    <section class="portfolio-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="academyrafa">
+                            <img src="img/p1.jpg" class="img-fluid portfolio-img" alt="Proyecto 1">
+                            <div class="portfolio-title">TAYLOR UNIVERSITY</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="hermeus"> 
+                            <img src="img/p2.jpg" class="img-fluid portfolio-img" alt="Proyecto 2">
+                        <div class="portfolio-title">HERMEUS</div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="diego">
+                            <img src="img/p3.jpg" class="img-fluid portfolio-img" alt="Proyecto 3">
+                            <div class="portfolio-title">SAN DIEGO WAVES FC</div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p4.jpg" class="img-fluid portfolio-img" alt="Proyecto 4">
+                        <div class="portfolio-title">RASHOD BATEMAN</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p5.jpeg" class="img-fluid portfolio-img" alt="Proyecto 5">
+                        <div class="portfolio-title">MILWAUKEE BREWERS</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p6.jpg" class="img-fluid portfolio-img" alt="Proyecto 6">
+                        <div class="portfolio-title">MOTLOW STATE BUCKS</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p7.jpeg" class="img-fluid portfolio-img" alt="Proyecto 7">
+                        <div class="portfolio-title">FLYERS 50TH JERSEY</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <img src="img/p8.jpeg" class="img-fluid portfolio-img" alt="Proyecto 8">
+                        <div class="portfolio-title">DAPHNE RANGERS ACADEMY</div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" onclick="showTitle(this)">
+                    <div class="portfolio-item">
+                        <a href="san">
+                            <img src="/img/port/sand/san6.jpeg" class="img-fluid portfolio-img" alt="Proyecto 9">
+                            <div class="portfolio-title">CHICAFO FIRE FC</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <%- include ('partials/footer')%>
+</footer>
+</html>

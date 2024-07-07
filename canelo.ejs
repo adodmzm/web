@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Fotografías</title>
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Fotografías</h1>
+        <%- include ('partials/navigation2')%>
+        <%- include ('partials/head2')%>
+    
+    </header>
+    <style>
+       
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 1620px;
+            height: 500px;
+            object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="gallery">
+        <img src="img/port/can/can9.jpg" alt="Imagen 1">
+        <img src="/img/port/can/can1.jpg" alt="Imagen 2">
+        <img src="/img/port/can/can2.jpg" alt="Imagen 3">
+        <img src="/img/port/can/can3.jpg" alt="Imagen 4">
+        <img src="/img/port/can/can4.jpg" alt="Imagen 5">
+        <img src="/img/port/can/can5.jpg" alt="Imagen 6">
+        <img src="/img/port/can/can6.jpg" alt="Imagen 7">
+        <img src="/img/port/can/can7.jpg" alt="Imagen 3">
+        <img src="/img/port/can/can8.jpg" alt="Imagen 4">
+        <img src="/img/port/can/can9.jpg" alt="Imagen 5">
+        <img src="/img/port/can/can10.jpg" alt="Imagen 6">
+        <img src="/img/port/can/can11.jpg" alt="Imagen 7">
+        <img src="/img/port/can/can12.jpg" alt="Imagen 7">
+
+        
+
+
+
+
+    </div>
+</body>
+
+
+    <footer>
+        <%- include ('partials/footer')%>
+
+    </footer>
+</body>
+</html>
